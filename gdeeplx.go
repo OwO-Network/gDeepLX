@@ -2,7 +2,7 @@
  * @Author: Vincent Young
  * @Date: 2023-07-23 19:57:34
  * @LastEditors: Vincent Young
- * @LastEditTime: 2023-07-23 20:09:29
+ * @LastEditTime: 2023-07-23 20:16:27
  * @FilePath: /gdeeplx/gdeeplx.go
  * @Telegram: https://t.me/missuo
  *
@@ -102,7 +102,7 @@ type ResData struct {
 	TargetLang string `json:"target_lang"`
 }
 
-func TranslateText(targetLang string, translateText string, sourceLang string, numberAlternative int) (interface{}, error) {
+func Translate(translateText string, sourceLang string, targetLang string, numberAlternative int) (interface{}, error) {
 	id := getRandomNumber()
 
 	if sourceLang == "" {
