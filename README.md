@@ -14,7 +14,6 @@ Then, you can create a new DeepL translation client and use it for translation:
 ```go
 import (
 	"fmt"
-
 	"github.com/OwO-Network/gdeeplx"
 )
 
