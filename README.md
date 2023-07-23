@@ -1,5 +1,5 @@
 # gdeeplx
-gdeeplx is a Go library primarily used for DeepL translation.
+gdeeplx is a Go library used for DeepL translation.
 
 ## Installation
 
