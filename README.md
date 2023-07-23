@@ -18,7 +18,7 @@ import (
 )
 
 func main() {
-	result, err := gdeeplx.Translate("Hello World!", "ZH", "EN", 0)
+	result, err := gdeeplx.Translate("Hello World!", "EN", "ZH", 0)
 	if err != nil {
 		fmt.Printf("Error: %v\n", err)
 		return
