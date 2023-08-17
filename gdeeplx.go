@@ -197,9 +197,10 @@ func Translate(translateText string, sourceLang string, targetLang string, numbe
 				return true
 			})
 			return map[string]interface{}{
-				"id":           id,
-				"data":         res.Get("result.texts.0.text").String(),
-				"alternatives": alternatives,
+				"id":            id,
+				"data":          res.Get("result.texts.0.text").String(),
+				"detected_lang": res.Get("result.lang").String(),
+				"alternatives":  alternatives,
 			}, nil
 		}
 	}
