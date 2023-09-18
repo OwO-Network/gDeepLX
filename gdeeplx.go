@@ -103,6 +103,13 @@ type ResData struct {
 }
 
 func Translate(translateText string, sourceLang string, targetLang string, numberAlternative int) (interface{}, error) {
+
+	client := &http.Client{}
+	return TranslateWithClient(translateText, sourceLang, targetLang, numberAlternative, client)
+}
+
+func TranslateWithClient(translateText string, sourceLang string, targetLang string, numberAlternative int, client *http.Client) (interface{}, error) {
+
 	id := getRandomNumber()
 
 	if sourceLang == "" {
@@ -159,7 +166,6 @@ func Translate(translateText string, sourceLang string, targetLang string, numbe
 		request.Header.Set("x-app-version", "2.9.1")
 		request.Header.Set("Connection", "keep-alive")
 
-		client := &http.Client{}
 		resp, err := client.Do(request)
 		if err != nil {
 			log.Println(err)
