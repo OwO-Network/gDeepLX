@@ -1,6 +1,10 @@
 # gDeepLX
 gDeepLX is a Go library used for DeepL translation.
 
+## Deprecated
+
+Core repository [OwO-Network/DeepLX](https://github.com/OwO-Network/DeepLX) already supports more features.
+
 ## Installation
 
 Install it with the go get command:
